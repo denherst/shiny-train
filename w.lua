@@ -7,7 +7,7 @@ local s, f = pcall(function()
     workspace["locked parts [do not select]"].nukedoor1:Destroy()
     function getkey()
         workspace["locked parts [do not select]"].keyers.ClickDetector.MaxActivationDistance = 100
-        fireclickdetector(workspace["locked parts [do not select]"].keyers.ClickDetector)
+        fireclickdetector(workspace["locked parts [do not select]"].keyers.ClickDetector, 0)
         me.Backpack:WaitForChild("Nuclear Key").Parent = me.Character
     end
     
@@ -21,7 +21,7 @@ local s, f = pcall(function()
     task.wait(0.1)
     getkey()
     task.wait(1)
-    fireclickdetector(workspace["locked parts [do not select]"].Button.Button.ClickDetector)
+    fireclickdetector(workspace["locked parts [do not select]"].Button.Button.ClickDetector, 0)
     task.wait(0.1)
     me.Character.HumanoidRootPart.CFrame = currentpos
 end)
