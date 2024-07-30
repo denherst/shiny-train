@@ -4,7 +4,9 @@ local me = game.Players.LocalPlayer
 local currentpos
 
 local s, f = pcall(function()
-    workspace["locked parts [do not select]"].nukedoor1:Destroy()
+    pcall(function()
+        workspace["locked parts [do not select]"].nukedoor1:Destroy()
+    end)
     function getkey()
         workspace["locked parts [do not select]"].keyers.ClickDetector.MaxActivationDistance = 100
         fireclickdetector(workspace["locked parts [do not select]"].keyers.ClickDetector, 0)
@@ -31,7 +33,7 @@ if not s then
 end
 
 game.Players.LocalPlayer.OnTeleport:Connect(function(State)
-    queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/denherst/shiny-train/main/w1.lua"))()')
+    queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/denherst/shiny-train/main/w.lua"))()')
 end)  
 
 task.wait(1)
