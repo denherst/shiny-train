@@ -31,7 +31,7 @@ if not s then
 end
 
 game.Players.LocalPlayer.OnTeleport:Connect(function(State)
-    queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/denherst/shiny-train/main/w.lua"))()')
+    queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/denherst/shiny-train/main/w1.lua"))()')
 end)  
 
 task.wait(1)
