@@ -36,9 +36,9 @@ end)
 
 task.wait(1)
 
+module:Teleport(game.PlaceId)
+
 game:GetService("TeleportService").TeleportInitFailed:Connect(function(player, teleportResult, errorMessage, placeId, teleportOptions)
     task.wait(1)
     module:Teleport(game.PlaceId)
 end)
-
-module:Teleport(game.PlaceId)
