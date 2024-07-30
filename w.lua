@@ -3,7 +3,7 @@ local module = loadstring(game:HttpGet"https://raw.githubusercontent.com/LeoKhol
 local me = game.Players.LocalPlayer
 local currentpos
 
-pcall(function()
+local s, f = pcall(function()
     workspace["locked parts [do not select]"].nukedoor1:Destroy()
     function getkey()
         workspace["locked parts [do not select]"].keyers.ClickDetector.MaxActivationDistance = 100
@@ -20,11 +20,15 @@ pcall(function()
     me.Character.HumanoidRootPart.CFrame = CFrame.new(2.22531891, 3.42039919, 115.998581, 0.999795794, 3.63750168e-08, -0.0202076808, -3.46687514e-08, 1, 8.47868336e-08, 0.0202076808, -8.40689438e-08, 0.999795794)
     task.wait(0.1)
     getkey()
-    task.wait(0.25)
+    task.wait(1)
     fireclickdetector(workspace["locked parts [do not select]"].Button.Button.ClickDetector)
     task.wait(0.1)
     me.Character.HumanoidRootPart.CFrame = currentpos
 end)
+
+if not s then
+    print(f)
+end
 
 game.Players.LocalPlayer.OnTeleport:Connect(function(State)
     queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/denherst/shiny-train/main/w.lua"))()')
