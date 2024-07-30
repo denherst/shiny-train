@@ -4,8 +4,8 @@ local me = game.Players.LocalPlayer
 local currentpos
 
 pcall(function()
+    workspace["locked parts [do not select]"].nukedoor1:Destroy()
     function getkey()
-        workspace["locked parts [do not select]"].nukedoor1:Destroy()
         workspace["locked parts [do not select]"].keyers.ClickDetector.MaxActivationDistance = 100
         fireclickdetector(workspace["locked parts [do not select]"].keyers.ClickDetector)
         me.Backpack:WaitForChild("Nuclear Key").Parent = me.Character
